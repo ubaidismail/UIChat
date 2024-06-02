@@ -1,0 +1,68 @@
+body , html{
+    overflow-x: hidden;
+}
+.btn_theme{
+    background-color: rgb(49, 133, 49);
+    border: 1px solid green;
+    color: #fff;
+    padding: 10px 40px;
+    font-size: 20px;
+    margin-top: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 600;
+}
+.first_sec img{
+    margin-top: 100px;
+    height: 130px !important;
+    object-fit: cover;
+    width: 100%;
+}
+
+.list_service_offered {
+    background-color: #282828;
+    height: 100vh;
+    color: #fff;
+}
+
+.bottom_services {
+    margin-top: calc(100% - 13.5%) !important;
+    margin-left:25px;
+}
+ul.bottom_services_list {
+    padding: 0;
+    list-style: none;
+    text-transform: capitalize;
+    line-height: 2;
+}
+ul.bottom_services li svg {
+    color: #fff;
+}
+ul.bottom_services li {
+    line-height: 2;
+}
+.logo_top svg {
+    font-size: 50px;
+    margin-left: 29px;
+    margin-top: 40px;
+}
+.form_styles{
+    background-color: #282828;
+    padding: 20px;
+    border-radius: 8px;
+}
+.form_styles div{
+    color: #fff;
+}
+.form_styles .eye_margin_minus {
+    margin-left: -27px;
+    color: #000;
+}
+.d_black {
+    background-color: #000;
+}
+.btn_custom_color{
+    background-color: orange;
+    color: #fff;
+}
