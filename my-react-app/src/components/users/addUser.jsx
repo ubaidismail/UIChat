@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import Header from '../header/header';
+import Header from '../header/sidebar';
 import styles from './users.module.css'
 import axios from 'axios';
+
 import { useNavigate } from "react-router-dom";
+import axiosInstance from '../../AxiosInstance';
 
 
 function AddUser() {
@@ -16,12 +18,6 @@ function AddUser() {
     // const [user_id, setUserId] = useState('');
     let navigate = useNavigate();
     const authToken = localStorage.getItem('token');
-    const axiosInstance = axios.create({
-        baseURL: 'http://localhost:4000', // Corrected the property name to baseURL
-        headers: {
-            'auth-token': authToken, // Include the token in the Authorization header
-        },
-    });
 
 
 

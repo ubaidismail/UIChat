@@ -1,4 +1,7 @@
 .main_area {
-    color: red;
+
     margin-left: 300px;
+}
+.main_area svg{
+    display: inline;
 }

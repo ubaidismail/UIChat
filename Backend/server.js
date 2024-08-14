@@ -37,19 +37,7 @@ io.on('connection' , (socket) => {
     });
   });
 
-  // socket.on('send', (message) => {
-  //   const user = users[socket.id];
-  //   console.log('Sending message:', message, 'from user:', user);
-  //   if (user) {
-  //     socket.broadcast.emit('receive', {
-  //       message: message,
-  //       name: user
-  //     });
-  //   } else {
-  //     console.log('User not found for socket ID:', socket.id);
-  //   }
-  // });
-
+  
   socket.on("disconnect", (reason, details) => {
     // the reason of the disconnection, for example "transport error"
     // console.log('User disconnected:', socket.id);

@@ -30,6 +30,9 @@ body , html{
     margin-top: calc(100% - 13.5%) !important;
     margin-left:25px;
 }
+.bottom_services_list svg{
+    display: inline-block;
+}
 ul.bottom_services_list {
     padding: 0;
     list-style: none;
@@ -45,7 +48,7 @@ ul.bottom_services li {
 .logo_top svg {
     font-size: 50px;
     margin-left: 29px;
-    margin-top: 40px;
+    padding-top: 20px;
 }
 .form_styles{
     background-color: #282828;

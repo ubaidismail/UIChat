@@ -7,26 +7,7 @@ var nodemailer = require('nodemailer');
 const JWT_SECRET = 'Ubaid';
 
 const authController = {
-    // async check_AUTH(req,res){
-    //     let success = false;
-    //     const {authToken} = req.body;
-
-    //     try {
-    //         let token_verify = jwt.verify(authToken, JWT_SECRET);
-    //         // consolel.log(token_verify);
-    //         success = true;
-    //         res.json({success, token_verify}); // Sending the saved user object as response
-    //     } catch (error) {
-    //         if(error.message == 'jwt expired'){
-    //             res.status(500).json({ error: 'Token Expired', message: error.message , success });
-    //         }else{
-    //             res.status(500).json({ error: 'Internal Server Error', message: error.message });
-    //         }
-            
-
-    //     }
-
-    // },
+   
     async login(req, res) {
         // Your login logic here
         let success = false;
@@ -213,7 +194,7 @@ const authController = {
     async list_users(req,res){
         let success = false;
         try {
-            const user = await User.find({}); // it will minus the password field and get rest fields (data)
+            const user = await User.find({}); 
             success = true;
             res.json({success, user});    
             

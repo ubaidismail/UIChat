@@ -15,6 +15,7 @@
 .side_nav li a svg{
     padding-right: 10px;
     font-size: 30px;
+    display: inline;
 }
 .side_nav li{
     list-style: none;

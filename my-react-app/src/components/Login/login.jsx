@@ -25,7 +25,7 @@ export default function Login() {
 
   useEffect(() => {
     if (auth != '') {
-      navigate('/');
+      navigate('/dashboard');
     }
 
   },)
@@ -49,7 +49,7 @@ export default function Login() {
         localStorage.setItem('token', response.data.authToken);
         setSuccessMsg('Login Success');
         setTimeout(() => {
-          navigate('/');
+          navigate('/dashboard');
         }, 2000);
       } else {
         console.log(response.data);
@@ -65,9 +65,11 @@ export default function Login() {
         <div className="col-md-3">
           <div className={styles.list_service_offered}>
             <div className="">
-              <div className={styles.logo_top}>
-                <BsDatabaseSlash />
-              </div>
+              <a href="/">
+                <div className={styles.logo_top}>
+                  <BsDatabaseSlash />
+                </div>
+              </a>
               <div className={styles.bottom_services}>
 
                 <h3 className='mb-2'>Services Offered</h3>
