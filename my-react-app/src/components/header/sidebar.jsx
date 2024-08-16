@@ -36,7 +36,7 @@ export default function Header() {
                     <nav>
                         <ul className={styles.nav_links}>
                             <li><Link to="/dashboard"><AiFillDashboard /> Dashboard</Link></li>
-                            <li><Link to="/add-user"><AiOutlineUserSwitch /> User</Link></li>
+                            <li><Link to="/users"><AiOutlineUserSwitch /> User</Link></li>
                             <li><Link to="javascript:void(0)" onClick={handleLogout}> <AiOutlineLogout /> Logout</Link></li>
                         </ul>
                     </nav>

@@ -1,0 +1,12 @@
+.edit_and_delete {
+    position: absolute;
+    right: 0;
+    background-color: #faf6f6;
+    width: auto;
+    bottom: -21px;
+    z-index: 999;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 0 10px;
+    cursor: pointer;
+}

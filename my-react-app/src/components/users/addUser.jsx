@@ -41,24 +41,7 @@ function AddUser() {
             // setError('There was an error getting the user: ' + error.message);
         }
     }
-    // const checkAuth = async (authToken) => {
-    //     try {
-    //         const response = await axiosInstance.post('/check-user-auth', authToken);
-
-    //         if (response.data.success) {
-
-    //         } else {
-    //             console.log(response);
-    //             // alert('Error: ' + response.data.message);
-    //             navigate('/');
-    //         }
-    //     } catch (error) {
-    //         // navigate('/login');
-    //         // localStorage.removeItem('token');
-    //         console.error('There was an error getting the user:', error.message);
-    //         // setError('There was an error getting the user: ' + error.message);
-    //     }
-    // }
+   
 
     const delete_user = async (user_id) => {
 
@@ -74,9 +57,6 @@ function AddUser() {
          console.log(error);   
         }
     }
-
-    
-
 
     const handleRegister = async (e) => {
         e.preventDefault();
@@ -150,6 +130,7 @@ function AddUser() {
                     </div>
                     {error ? error: ''}
                     <h3 className='mt-2 text-center'>Users List</h3>
+                    
                     <table width="100%" className={styles.table}>
                         <tr>
                             <th>User Id#</th>

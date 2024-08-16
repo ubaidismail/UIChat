@@ -8,7 +8,6 @@ import Dashboard from './components/dashboard/dashboard';
 import { Route, Routes } from 'react-router-dom';
 import NoteState from './context/notes/noteState';
 import Users from './components/users/users';
-import AddUser from './components/users/addUser';
 import Attendance from './components/attendance/attendance';
 import AxiosProvider from './context/axioContext/axiosState';
 
@@ -26,7 +25,7 @@ function App() {
           <Route path='/login' element={<Login />} />
           <Route path='/register' element={<Register />} />
           <Route path='/forget-password' element={<ForgetPassword />} />
-          <Route path='/add-user' element={<AddUser />} />
+          <Route path='/users' element={<Users />} />
           <Route path='/attendance' element={<Attendance />} />
           <Route path='/users' element={<Users />} />
 
