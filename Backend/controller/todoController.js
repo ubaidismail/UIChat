@@ -40,7 +40,7 @@ const todoController = {
           return res.status(404).json({ success: false, message: 'Todo not found' });  
         }
 
-        res.status(200).send({success:true,todo});
+        res.status(200).send({success:true,todo:todo});
         
         
         // console.log(todo);

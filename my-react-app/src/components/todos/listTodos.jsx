@@ -1,15 +1,16 @@
 import React, { useContext, useEffect, useState } from "react";
 import AxiosContext from "../../context/axioContext/axiosContext";
-import { BsFillTrashFill, BsThreeDotsVertical, BsFillPencilFill } from "react-icons/bs";
+import { BsFillTrashFill, BsThreeDotsVertical, BsFillPencilFill,BsCardChecklist } from "react-icons/bs";
 import { collapse } from "@material-tailwind/react";
 import styles from './listTodos.module.css'
 
 
-export default function ListTodos() {
+export default function ListTodos({setEditTodo}) {
 
     const axiosRequest = useContext(AxiosContext)
     const [todos, setTodos] = useState([])
     const [todoOption, setTodoOption] = useState({})
+    
 
     const fetchTodos = async () => {
         try {
@@ -29,7 +30,7 @@ export default function ListTodos() {
     useEffect(() => {
         fetchTodos();
 
-    }, [])
+    }, [fetchTodos])
 
     const handle_options_todos = (id) => {
         // setTodoOption(!todoOption);
@@ -42,8 +43,21 @@ export default function ListTodos() {
 
     }
 
-    const handleTodoEdit = (id) => {
-        alert(id);
+    const handleTodoEdit = async (id) => {
+        try {
+            let response = await axiosRequest({
+                method: 'post',
+                url: '/get-todo/' + id,
+            })
+            if(response.success){
+                setEditTodo(response.todo);
+                console.log(response.todo)
+            }else{
+                alert('error');
+            }
+        } catch (error) {
+            console.error(error);
+        }
     }
     const handleTodoDelete = async (id) => {
         try {
@@ -64,7 +78,7 @@ export default function ListTodos() {
         <div>
 
             <div
-                className="relative flex w-96 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md"
+                className="relative flex flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md"
             >
                 <div className="p-6">
                     <div className="mb-4 flex items-center justify-between">
@@ -86,11 +100,7 @@ export default function ListTodos() {
                                 todos.map((todo, index) =>
                                     <div className="flex items-center justify-between pb-3 pt-3 last:pb-0 position-relative" key={index}>
                                         <div className="flex items-center gap-x-3">
-                                            <img
-                                                src="https://demos.creative-tim.com/test/corporate-ui-dashboard/assets/img/team-1.jpg"
-                                                alt="Tania Andrew"
-                                                className="relative inline-block h-9 w-9 rounded-full object-cover object-center"
-                                            />
+                                            <BsCardChecklist />
                                             <div>
                                                 <h6
                                                     className="block font-sans text-base font-semibold leading-relaxed tracking-normal text-blue-gray-900 antialiased"
